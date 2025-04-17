@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter';
+  font-size: 15px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+  padding: 60px 100px;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 38px;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 36px;
+  text-decoration: none;
+}
+
+ul li {
+  font-size: 18px;
+}
+
+ul li:hover {
+  color: #000ee4;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: end;
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  background: linear-gradient(
+    to top, rgba(0, 0, 0, 0.8) 42%, rgba(0, 0, 0, 0)),
+    url('/public/assets/images/image-web-3-desktop.jpg');
+
+  width: 100%;
+  height: 100%;
+}
+
+.hero article {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+  width: 100%;
+  gap: 32px;
+}
+
+article div.content {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero h1 {
+  font-size: 62px;
+  line-height: 1;
+  color: #e4efff;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.5;
+  color:  #a8c4ff;
+}
+
+a.button {
+  align-self: flex-end;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px #e4efff solid;
+  border-radius: 28px;
+  color: #e4efff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 180px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.sidebar {
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 18px;
+  background-color: #e4efff;
+  border-radius: 10px;
+  border: 1px solid #749dff;
+}
+
+.sidebar h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #00001a;
+  text-align: left;
+  margin-inline: 16px;
+  margin-top: 18px;
+}
+
+.sidebar article {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar hr {
+  border-color: #a8c4ff;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #00001a;
+  font-size: 24px;
+}
+
+.sidebar p {
+  color: #000ee4;
+  font-size: 18px;
+}
+
+.popular {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: span 3 / span 3;
+  grid-row-start: 3;
+  gap: 16px;
+}
+
+.popular article {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding: 22px;
+  height: 100%;
+  flex: 1;
+  gap: 5px;
+
+  background-image: linear-gradient(
+    to bottom, rgba(0, 0, 0, 0.75) 60%, rgba(0, 0, 0, 0.55) ), 
+    url(/public/assets/images/image-retro-pcs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.popular h4 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #a8c4ff;
+  margin-bottom: 5px;
+}
+
+.popular h3 a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #e4efff;
+  cursor: pointer;
+  transition: all ease .8s;
+}
+
+.popular h3 a:hover {
+  color: white;
+}
+
+.popular p {
+  color: #e4efff;
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding: 28px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /* nav .menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #000ee4;
+    border-radius: 50%;
+    cursor: pointer;
+  } */
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero {
+    order: 1;
+    width: 100%;
+    height: 520px;
+  }
+
+  .sidebar {
+    order: 2;
+    width: 100%;
+  }
+
+  .popular {
+    order: 3;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .popular article {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /* nav .menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #000ee4;
+    border-radius: 50%;
+    cursor: pointer;
+  } */
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero {
+    order: 1;
+    width: 100%;
+  }
+
+  .sidebar {
+    order: 2;
+    width: 100%;
+  }
+
+  .popular {
+    order: 3;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .popular article {
+    width: 100%;
+  }
+}
+
+@media (max-width: 426px) {
+  body {
+    padding: 10px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /* nav .menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #000ee4;
+    border-radius: 50%;
+    cursor: pointer;
+  } */
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero {
+    order: 1;
+    width: 100%;
+    height: 490px;
+    background-size: cover;
+    padding: 15px;
+  }
+
+  .hero article {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  a.button {
+    width: 100%;
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .sidebar {
+    order: 2;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sidebar h2 {
+    font-size: 32px;
+  }
+
+  .sidebar h3 a {
+    font-size: 22px;
+  }
+
+  .sidebar p {
+    font-size: 14px;
+  }
+
+  .sidebar article {
+    gap: 6px;
+  }
+
+  .popular {
+    order: 3;
+    flex-direction: column;
+    gap: 6px;
+    height: 500px;
+  }
+
+  .popular article {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .popular h4 {
+    font-size: 26px;
+  }
+
+  .popular h3 a {
+    font-size: 22px;
+  }
+
+  .popular p {
+    font-size: 14px;
+  }
+}
