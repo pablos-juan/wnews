@@ -58,7 +58,7 @@ main {
   grid-row: span 2 / span 2;
   background: linear-gradient(
     to top, rgba(0, 0, 0, 0.8) 42%, rgba(0, 0, 0, 0)),
-    url('/public/assets/images/image-web-3-desktop.jpg');
+    url('/public/images/image-web-3-desktop.jpg');
 
   width: 100%;
   height: 100%;
@@ -173,7 +173,7 @@ a.button {
 
   background-image: linear-gradient(
     to bottom, rgba(0, 0, 0, 0.75) 60%, rgba(0, 0, 0, 0.55) ), 
-    url(/public/assets/images/image-retro-pcs.jpg);
+    url(/public/images/image-retro-pcs.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
