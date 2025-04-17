@@ -5,7 +5,7 @@ export function App () {
     <section className='main'>
       <header>
         <nav>
-          <img src='/public/assets/images/logo.svg' alt='' />
+          <img src='/images/logo.svg' alt='logo' />
           <ul>
             <li>Home</li>
             <li>New</li>
